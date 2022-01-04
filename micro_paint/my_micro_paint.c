@@ -6,7 +6,7 @@
 /*   By: sameye <sameye@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 19:12:00 by sameye            #+#    #+#             */
-/*   Updated: 2022/01/04 16:10:36 by sameye           ###   ########.fr       */
+/*   Updated: 2022/01/04 16:31:47 by sameye           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,7 +166,10 @@ int main(int ac, char **av)
 	}
 	file = fopen(av[1], "r");
 	if (!file)
+	{
+		ft_putstr("Error: Operation file corrupted\n");
 		return (1);
+	}
 	if (ft_exec(file))
 	{
 		ft_putstr("Error: Operation file corrupted\n");
